@@ -1,0 +1,15 @@
+.about {
+  background-color: $color-gray-light;
+  padding-top: $gap * 5;
+  padding-bottom: $gap * 5;
+
+  &__container {
+    display: grid;
+
+    @extend %container;
+    @include lg-min {
+      gap: $gap * 5;
+      grid-template-columns: 1fr 271px;
+    }
+  }
+}
