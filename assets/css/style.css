@@ -412,6 +412,18 @@ a {
   font-size: 1.125rem;
 }
 
+h2 {
+  letter-spacing: 0.1em;
+  color: #2d3651;
+  margin-top: 0;
+  font-family: "Roboto Slab", serif;
+  line-height: 1.2em;
+}
+
+p {
+  color: #637588;
+}
+
 .header {
   position: relative;
   display: grid;
@@ -725,10 +737,41 @@ a {
   background-color: #e5e5e5;
   padding-top: 100px;
   padding-bottom: 100px;
+  letter-spacing: 0.055em;
 }
 
 .about__container {
   display: grid;
+}
+
+.about__content p:first-of-type {
+  position: relative;
+  margin-top: -5px;
+}
+
+.about__content p:first-of-type::after {
+  position: absolute;
+  top: 0;
+  width: 2px;
+  height: 200px;
+  content: "";
+  background-color: rgba(99, 117, 136, 0.1);
+}
+
+.about__content p:last-of-type {
+  margin: 0;
+}
+
+.about__image {
+  display: grid;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  justify-items: center;
+}
+
+.about__image img {
+  max-width: 100%;
+  max-height: 480px;
 }
 
 @media (min-width: 576px) {
@@ -771,6 +814,10 @@ a {
 }
 
 @media (min-width: 992px) {
+  .about {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
   h1 {
     font-size: 3.75rem;
   }
@@ -778,6 +825,10 @@ a {
     min-width: 250px;
     height: 60px;
     font-size: 1.125rem;
+  }
+  h2 {
+    margin-bottom: 56px;
+    font-size: 2.5rem;
   }
   .header-content__title {
     margin: 0 0 53px;
@@ -789,6 +840,12 @@ a {
   .about__container {
     gap: 100px;
     grid-template-columns: 1fr 271px;
+  }
+  .about__content p {
+    font-size: 1.125rem;
+  }
+  .about__content p:first-of-type::after {
+    right: -50px;
   }
 }
 

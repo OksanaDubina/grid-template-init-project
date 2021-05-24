@@ -4,3 +4,10 @@
   padding-right: $gap;
   padding-left: $gap;
 }
+
+%section {
+  @include lg-min {
+    padding-top: $gap * 5;
+    padding-bottom: $gap * 5;
+  }
+}
